@@ -38,14 +38,10 @@ public class KafkaConsumerService {
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory);
 
-        System.out.println("here");
-
         return factory;
     }
 
     @KafkaListener(topics = "debezium01.theseus.users", groupId = "theseus.consumer.group")
     public void consume(Payload user) {
-        System.out.println("here");
-        System.out.println(user);
     }
 }
