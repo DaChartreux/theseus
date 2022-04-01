@@ -1,32 +1,18 @@
-package com.potatoxchip.api.user;
+package com.potatoxchip.indexer.model;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "username")
     private String userName;
 
-    @Column(name = "handlename")
     private String handleName;
 
-    @Column(name = "email")
     private String email;
 
-    @CreationTimestamp
-    @Column(name = "createdat")
     private LocalDateTime createdAt;
 
-    @UpdateTimestamp
-    @Column(name = "updatedat")
     private LocalDateTime updatedAt;
 
     public Long getId() {
