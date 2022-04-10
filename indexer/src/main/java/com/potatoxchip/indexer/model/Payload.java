@@ -3,17 +3,17 @@ package com.potatoxchip.indexer.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Payload {
-    private String operation;
+    private Operation operation;
     private User before;
     private User after;
 
     @JsonProperty("op")
-    public String getOperation() {
+    public Operation getOperation() {
         return operation;
     }
 
     @JsonProperty("op")
-    public void setOperation(String operation) {
+    public void setOperation(Operation operation) {
         this.operation = operation;
     }
 
@@ -37,4 +37,6 @@ public class Payload {
     public String toString() {
         return "Payload{" + "operation='" + operation + '\'' + ", before=" + before + ", after=" + after + '}';
     }
+
+    public enum Operation {u, c, d}
 }

@@ -1,17 +1,14 @@
-package com.potatoxchip.indexer.model;
+package com.potatoxchip.api.user;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 @Document(indexName = "user")
-public class User {
+public class UserModel {
     @Id
     private Long id;
-
     private String userName;
-
     private String handleName;
-
     private String email;
 
     public Long getId() {
@@ -48,7 +45,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", userName='" + userName + '\'' + ", handleName='" + handleName + '\'' + ", " +
-                "email='" + email + '\'' + '}';
+        return "UserModel{" + "id=" + id + ", userName='" + userName + '\'' + ", handleName='" + handleName + '\'' +
+                ", email='" + email + '\'' + '}';
     }
 }
